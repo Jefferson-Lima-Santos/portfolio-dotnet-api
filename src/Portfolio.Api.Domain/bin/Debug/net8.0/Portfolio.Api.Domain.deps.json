@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Portfolio.Api.Domain/1.0.0": {
+        "runtime": {
+          "Portfolio.Api.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Portfolio.Api.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

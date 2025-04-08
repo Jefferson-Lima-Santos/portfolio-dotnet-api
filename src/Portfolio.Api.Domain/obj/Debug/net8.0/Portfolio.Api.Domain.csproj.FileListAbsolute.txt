@@ -1,0 +1,11 @@
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\bin\Debug\net8.0\Portfolio.Api.Domain.deps.json
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\bin\Debug\net8.0\Portfolio.Api.Domain.dll
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\bin\Debug\net8.0\Portfolio.Api.Domain.pdb
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\obj\Debug\net8.0\Portfolio.Api.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\obj\Debug\net8.0\Portfolio.Api.Domain.AssemblyInfoInputs.cache
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\obj\Debug\net8.0\Portfolio.Api.Domain.AssemblyInfo.cs
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\obj\Debug\net8.0\Portfolio.Api.Domain.csproj.CoreCompileInputs.cache
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\obj\Debug\net8.0\Portfolio.Api.Domain.dll
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\obj\Debug\net8.0\refint\Portfolio.Api.Domain.dll
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\obj\Debug\net8.0\Portfolio.Api.Domain.pdb
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Domain\obj\Debug\net8.0\ref\Portfolio.Api.Domain.dll

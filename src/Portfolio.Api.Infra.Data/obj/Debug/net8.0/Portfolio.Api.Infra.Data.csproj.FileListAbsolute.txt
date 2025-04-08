@@ -1,0 +1,11 @@
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\bin\Debug\net8.0\Portfolio.Api.Infra.Data.deps.json
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\bin\Debug\net8.0\Portfolio.Api.Infra.Data.dll
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\bin\Debug\net8.0\Portfolio.Api.Infra.Data.pdb
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\obj\Debug\net8.0\Portfolio.Api.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\obj\Debug\net8.0\Portfolio.Api.Infra.Data.AssemblyInfoInputs.cache
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\obj\Debug\net8.0\Portfolio.Api.Infra.Data.AssemblyInfo.cs
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\obj\Debug\net8.0\Portfolio.Api.Infra.Data.csproj.CoreCompileInputs.cache
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\obj\Debug\net8.0\Portfolio.Api.Infra.Data.dll
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\obj\Debug\net8.0\refint\Portfolio.Api.Infra.Data.dll
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\obj\Debug\net8.0\Portfolio.Api.Infra.Data.pdb
+C:\RepositoriosPessoais\portfolio-api\src\Portfolio.Api.Infra.Data\obj\Debug\net8.0\ref\Portfolio.Api.Infra.Data.dll
