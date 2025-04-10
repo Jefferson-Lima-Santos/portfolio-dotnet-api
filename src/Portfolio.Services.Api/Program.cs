@@ -1,25 +1,17 @@
+using Portfolio.Services.Api.Configurations;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+builder.AddLoggerConfig();
+builder.Services.AddApiConfig(builder.Configuration);
+builder.Services.AddSwaggerConfig();
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.ResolveDependencies(builder.Configuration);
+builder.Services.AddHealthConfig(builder.Configuration);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
+app.UseHealthConfig();
+app.UseApiConfiguration(app.Environment);
+app.UseSwaggerConfig();
 app.Run();
