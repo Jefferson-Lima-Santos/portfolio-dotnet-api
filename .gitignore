@@ -27,6 +27,9 @@ bld/
 src/Portfolio.Api.Domain/obj/
 src/Portfolio.Api.Infra.Data/obj/
 src/Portfolio.Services.Api/obj/
+src/Portfolio.Api.Domain/bin/
+src/Portfolio.Api.Infra.Data/bin/
+src/Portfolio.Services.Api/bin/
 Portfolio.Api.Infra.Data
 Portfolio.Api.Domain
 .vs
