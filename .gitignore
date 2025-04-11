@@ -276,5 +276,3 @@ __pycache__/
 \.DS_Store
 /server/src/AvaliaDigital/BI/Avalia.AvaliaDigital.BI.Services.Api/Properties/PublishProfiles/avaliadigital-bi-dev - Web Deploy1.pubxml
 *.pubxml
-/src/SEB.Identity.Services.Api/appsettings.Development.json
-/src/SEB.Identity.Services.Worker/appsettings.Development.json
