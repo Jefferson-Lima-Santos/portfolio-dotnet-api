@@ -28,7 +28,7 @@ namespace Portfolio.Api.Infra.Data.Mappings
                 .IsRequired();
             
             builder.HasOne(x => x.Project)
-                .WithMany(x => x.Images)
+                .WithMany(x => x.ProjectImages)
                 .HasForeignKey(x => x.ProjectId);
             
             builder.ToTable("tb_project_images", "ptf");

@@ -9,7 +9,7 @@ namespace Portfolio.Api.Infra.Data.Data
            protected readonly PortfolioDbContext _portfolioDbContext;
            private DbSet<TEntity> _dbSet;
            protected readonly ILogger _logger;
-           public IQueryable<TEntity> Entites => _dbSet;
+           public IQueryable<TEntity> Entities => _dbSet;
 
            public GenericReadOnlyRepository(PortfolioDbContext portfolioDbContext, ILogger logger)
            {

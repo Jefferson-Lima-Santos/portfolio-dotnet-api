@@ -3,8 +3,10 @@ using Serilog;
 using Portfolio.Api.Domain.Data;
 using Portfolio.Api.Domain.Mediator;
 using Portfolio.Api.Domain.Mediator.Notifications;
+using Portfolio.Api.Domain.Repositories;
 using Portfolio.Api.Infra.Data.Data;
 using Portfolio.Api.Infra.Data.Interceptor;
+using Portfolio.Api.Infra.Data.Repositories;
 using Portfolio.Services.Api.Configurations.ApiKeyConfig;
 using Portfolio.Services.Api.Filters;
 
@@ -40,6 +42,9 @@ namespace Portfolio.Services.Api.Configurations
 
             // SoftDeleteInterceptor
             services.AddScoped<SoftDeleteInterceptor>();
+            
+            // ProjectRepository
+            services.AddScoped<IProjectReadOnlyRepository, ProjectReadOnlyRepository>();
         }
     }
 }

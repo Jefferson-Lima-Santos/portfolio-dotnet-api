@@ -17,6 +17,11 @@ namespace Portfolio.Api.Infra.Data.Mappings
                 .ValueGeneratedOnAdd()
                 .IsRequired();
             
+            builder.Property(x => x.ProjectUId)
+                .HasColumnName("ProjectUId")
+                .HasColumnType("uniqueidentifier")
+                .IsRequired();
+            
             builder.Property(x => x.Name)
                 .HasColumnName("name")
                 .HasColumnType("nvarchar")

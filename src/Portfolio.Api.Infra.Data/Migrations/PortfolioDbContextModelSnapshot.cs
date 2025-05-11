@@ -52,6 +52,9 @@ namespace Portfolio.Api.Infra.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("ProjectUId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Subtitle")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -69,8 +72,9 @@ namespace Portfolio.Api.Infra.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<long>("ImagePath")
-                        .HasColumnType("bigint");
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<long>("ProjectId")
                         .HasColumnType("bigint");
@@ -85,7 +89,7 @@ namespace Portfolio.Api.Infra.Data.Migrations
             modelBuilder.Entity("Portfolio.Api.Domain.Entities.ProjectImages", b =>
                 {
                     b.HasOne("Portfolio.Api.Domain.Entities.Project", "Project")
-                        .WithMany("Images")
+                        .WithMany("ProjectImages")
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -95,7 +99,7 @@ namespace Portfolio.Api.Infra.Data.Migrations
 
             modelBuilder.Entity("Portfolio.Api.Domain.Entities.Project", b =>
                 {
-                    b.Navigation("Images");
+                    b.Navigation("ProjectImages");
                 });
 #pragma warning restore 612, 618
         }

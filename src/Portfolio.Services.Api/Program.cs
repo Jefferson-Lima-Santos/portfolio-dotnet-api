@@ -7,6 +7,7 @@ builder.Services.AddApiConfig(builder.Configuration);
 builder.Services.AddSwaggerConfig();
 builder.Services.AddControllers();
 builder.Services.ResolveDependencies(builder.Configuration);
+builder.Services.AddAuthConfiguration(builder.Configuration);
 builder.Services.AddHealthConfig(builder.Configuration);
 
 var app = builder.Build();
