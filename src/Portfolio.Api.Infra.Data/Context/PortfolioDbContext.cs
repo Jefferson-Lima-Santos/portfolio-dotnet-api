@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Portfolio.Api.Domain.Entities;
 
 namespace Portfolio.Api.Infra.Data.Context
 {
@@ -13,10 +14,12 @@ namespace Portfolio.Api.Infra.Data.Context
         {
             _configuration = configuration;
         }
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectImages> ProjectImages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            //builder.HasDefaultSchema("ptf");
+            builder.HasDefaultSchema("ptf");
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
