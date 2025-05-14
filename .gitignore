@@ -30,7 +30,6 @@ src/Portfolio.Services.Api/obj/
 src/Portfolio.Api.Domain/bin/
 src/Portfolio.Api.Infra.Data/bin/
 src/Portfolio.Services.Api/bin/
-Portfolio.Api.Domain
 .vs
 **/obj
 #wwwroot/
