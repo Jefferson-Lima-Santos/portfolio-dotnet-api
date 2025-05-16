@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.Azure.Storage.Blobs" Version="8.0.0" />
     <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="9.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.15" />
@@ -26,6 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Portfolio.Api.Infra.Data\Portfolio.Api.Infra.Data.csproj" />
+    <ProjectReference Include="..\Portfolio.BuildingBlocks.Storage\Portfolio.BuildingBlocks.Storage.csproj" />
   </ItemGroup>
 
   <ItemGroup>
