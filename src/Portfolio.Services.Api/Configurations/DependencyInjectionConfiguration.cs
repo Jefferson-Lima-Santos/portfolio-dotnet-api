@@ -9,6 +9,7 @@ using Portfolio.Api.Infra.Data.Interceptor;
 using Portfolio.Api.Infra.Data.Repositories;
 using Portfolio.Services.Api.Configurations.ApiKeyConfig;
 using Portfolio.Services.Api.Filters;
+using Portfolio.BuildingBlocks.Storage.AzureStorage;
 
 namespace Portfolio.Services.Api.Configurations
 {
@@ -45,6 +46,10 @@ namespace Portfolio.Services.Api.Configurations
             
             // ProjectRepository
             services.AddScoped<IProjectReadOnlyRepository, ProjectReadOnlyRepository>();
+            services.AddScoped<IProjectRepository, ProjectRepository>(); 
+
+            // Storage
+            services.AddAzureBlobServiceDependencyInjection(configuration);
         }
     }
 }

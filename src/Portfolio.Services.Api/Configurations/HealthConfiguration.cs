@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using HealthChecks.Azure.Storage.Blobs;
 using System.Text;
 using System.Text.Json;
 using Portfolio.Api.Infra.Data.Context;
@@ -12,7 +13,19 @@ namespace Portfolio.Services.Api.Configurations
         {
             services.AddHealthChecks()
                 .AddSqlServer(configuration.GetConnectionString("DefaultConnection")!)
-                .AddDbContextCheck<PortfolioDbContext>(tags: new[] { "appdbcontext", "ready" });
+                .AddDbContextCheck<PortfolioDbContext>(tags: new[] { "appdbcontext", "ready" })
+                .AddAzureBlobStorage(
+                    tags: new[] { "AzureBlobStorage" },
+                    optionsFactory: sp =>
+                    {
+                        var blobConfig = configuration.GetSection("AzureBlobStorage");
+
+                        return new AzureBlobStorageHealthCheckOptions
+                        {
+                            ContainerName = blobConfig["ContainerName"]
+                        };
+                    }
+                );
         }
 
         public static void UseHealthConfig(this IApplicationBuilder app)
@@ -43,7 +56,8 @@ namespace Portfolio.Services.Api.Configurations
                 var mapping = new Dictionary<string, string>
                 {
                     {"sqlserver", "db" },
-                    {"PortfolioDbContext", "appdbcontext" }
+                    {"PortfolioDbContext", "appdbcontext" },
+                    {"azure_blob_storage", "AzureBlobStorage" }
                 };
 
                 foreach (var healthReportEntry in healthReport.Entries)
