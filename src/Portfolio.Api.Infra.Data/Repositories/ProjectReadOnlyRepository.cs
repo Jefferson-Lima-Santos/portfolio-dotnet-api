@@ -9,7 +9,7 @@ using Portfolio.Api.Infra.Data.Data;
 
 namespace Portfolio.Api.Infra.Data.Repositories
 {
-    public class ProjectReadOnlyRepository : GenericReadOnlyRepository<Project>, IProjectReadOnlyRepository
+    public class ProjectReadOnlyRepository : GenericRepository<Project>, IProjectReadOnlyRepository
     {
         public ProjectReadOnlyRepository(PortfolioDbContext portfolioDbContext,
             ILogger<ProjectReadOnlyRepository> logger) : base(portfolioDbContext, logger)

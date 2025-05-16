@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Portfolio.Api.Domain.Data;
 using Portfolio.Api.Infra.Data.Context;
+using Portfolio.Api.Domain.Repositories;
 
 namespace Portfolio.Api.Infra.Data.Data
 {
@@ -11,10 +12,13 @@ namespace Portfolio.Api.Infra.Data.Data
         private bool _disposed = false;
         private readonly PortfolioDbContext _context;
         private IDbContextTransaction _transaction = null;
-        
+        public IProjectRepository ProjectRepository { get; }
+
         public UnitOfWork(
+            IProjectRepository projectRepository,
             PortfolioDbContext context)
         {
+            ProjectRepository = projectRepository;
             _context = context;
         }
 
