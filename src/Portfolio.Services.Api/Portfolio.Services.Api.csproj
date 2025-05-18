@@ -32,7 +32,7 @@
 
   <ItemGroup>
     <Content Update="appsettings.Development.json">
-      <DependentUpon>Program.cs</DependentUpon>
+      <DependentUpon>appsettings.json</DependentUpon>
     </Content>
   </ItemGroup>
 
