@@ -8,6 +8,7 @@ using Portfolio.Api.Domain.Mediator;
 using Portfolio.Api.Domain.Mediator.Notifications;
 using Portfolio.Api.Domain.Projects.Commands;
 using Portfolio.Api.Domain.Projects.Queries;
+using Portfolio.CrossCutting.GitHub.Interface;
 
 namespace Portfolio.Services.Api.Controllers
 {
@@ -16,13 +17,16 @@ namespace Portfolio.Services.Api.Controllers
     public class ProjectController : ApiController
     {
         private readonly IMediatorHandler _mediator;
+        private readonly IGitHubProjectsService _gitHubProjectsService;
 
         public ProjectController(
             ILogger<ProjectController> logger,
             INotificationHandler<DomainNotification> notifications,
+            IGitHubProjectsService gitHubProjectsService,
             IMediatorHandler mediator) : base(logger, notifications)
         {
             _mediator = mediator;
+            _gitHubProjectsService = gitHubProjectsService;
         }
 
         [Authorize(AuthenticationSchemes = "ApiKey")]
@@ -34,12 +38,12 @@ namespace Portfolio.Services.Api.Controllers
 
             var metadata = new
             {
-                projects.TotalCount,
-                projects.PageSize,
-                projects.CurrentPage,
-                projects.TotalPages,
-                projects.HasPreviousPage,
-                projects.HasNextPage,
+                projects?.TotalCount,
+                projects?.PageSize,
+                projects?.CurrentPage,
+                projects?.TotalPages,
+                projects?.HasPreviousPage,
+                projects?.HasNextPage,
             };
             
             Response.Headers.Append("X-Pagination", JsonConvert.SerializeObject(metadata));
@@ -54,6 +58,17 @@ namespace Portfolio.Services.Api.Controllers
         {
             await _mediator.SendCommand(command, cancellationToken);
             return ResponseApi();
+        }
+        
+        
+        [Authorize(AuthenticationSchemes = "ApiKey")]
+        [HttpGet("github/projects/listed")]
+        public async Task<IActionResult> GetProjectsInGitHub(CancellationToken cancellationToken)
+        {
+            var username = "Jefferson-Lima-Santos";
+            var projects = await _mediator.Query(new GetAllGitHubProjectsQuery(username), cancellationToken);
+            
+            return ResponseApi(projects);
         }
 
     }

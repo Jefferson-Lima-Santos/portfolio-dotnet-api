@@ -10,6 +10,8 @@ using Portfolio.Api.Infra.Data.Repositories;
 using Portfolio.Services.Api.Configurations.ApiKeyConfig;
 using Portfolio.Services.Api.Filters;
 using Portfolio.BuildingBlocks.Storage.AzureStorage;
+using Portfolio.CrossCutting.GitHub.GitHub.Projects.Services;
+using Portfolio.CrossCutting.GitHub.Interface;
 
 namespace Portfolio.Services.Api.Configurations
 {
@@ -50,6 +52,23 @@ namespace Portfolio.Services.Api.Configurations
 
             // Storage
             services.AddAzureBlobServiceDependencyInjection(configuration);
+            
+            // HttpClient
+            services.AddHttpClient();
+            services.AddHttpClient("GitHubClient", client =>
+            {
+                client.BaseAddress = new Uri("https://api.github.com/");
+                client.DefaultRequestHeaders.Add("User-Agent", "Portfolio-API");
+                
+                var token = configuration["GitHub:Token"];
+                if (!string.IsNullOrEmpty(token))
+                {
+                    client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+                }
+            });
+            
+            // GitHUB
+            services.AddScoped<IGitHubProjectsService, GitHubProjectsService>();
         }
     }
 }

@@ -21,6 +21,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.02-BuildingBlocks", "03.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.BuildingBlocks.Storage", "src\Portfolio.BuildingBlocks.Storage\Portfolio.BuildingBlocks.Storage.csproj", "{88E8A9DD-A587-4EBD-B9FD-2117F820E223}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.CrossCutting.GitHub", "src\Portfolio.CrossCutting.GitHub\Portfolio.CrossCutting.GitHub\Portfolio.CrossCutting.GitHub.csproj", "{324A8200-F2E0-41EB-BC19-72EE659414D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.03-CrossCutting", "03.03-CrossCutting", "{A597E63A-C857-4A33-91BB-D7BCC9C4039E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{88E8A9DD-A587-4EBD-B9FD-2117F820E223}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88E8A9DD-A587-4EBD-B9FD-2117F820E223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88E8A9DD-A587-4EBD-B9FD-2117F820E223}.Release|Any CPU.Build.0 = Release|Any CPU
+		{324A8200-F2E0-41EB-BC19-72EE659414D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{324A8200-F2E0-41EB-BC19-72EE659414D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{324A8200-F2E0-41EB-BC19-72EE659414D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{324A8200-F2E0-41EB-BC19-72EE659414D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +62,8 @@ Global
 		{CC04757F-99CF-4F9E-ABD5-DC4AC88492FF} = {D7FD61C2-B7BD-44A5-BB04-34E3EC0D50B5}
 		{3CFF3EA2-D96C-493B-9DD0-F2584FC10A22} = {D7FD61C2-B7BD-44A5-BB04-34E3EC0D50B5}
 		{88E8A9DD-A587-4EBD-B9FD-2117F820E223} = {3CFF3EA2-D96C-493B-9DD0-F2584FC10A22}
+		{A597E63A-C857-4A33-91BB-D7BCC9C4039E} = {D7FD61C2-B7BD-44A5-BB04-34E3EC0D50B5}
+		{324A8200-F2E0-41EB-BC19-72EE659414D0} = {A597E63A-C857-4A33-91BB-D7BCC9C4039E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EAD6837D-7DC0-403D-8C03-B8F8F1234870}
